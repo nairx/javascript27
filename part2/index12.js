@@ -38,11 +38,16 @@ if (product) {
     cart = [...cart, {...product,quantity:1}];
   }
 }
-console.log(cart);
+console.log("Product List")
+console.log(products)
+console.log("Adding Product 1 to the cart")
 addToCart(1);
-console.log(cart);
+console.log("Adding Product 3 to the cart")
 addToCart(3);
+console.log("My Cart");
 console.log(cart);
+console.log("================")
+console.log("Total Order Value: ")
 
 //print total Order Value
  
