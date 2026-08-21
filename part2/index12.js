@@ -26,17 +26,17 @@ const products = [
 // const newArr = products.map(product => product.id === 2 ? {...product,price:product.price+3000} : product)
 // console.log(newArr)
 
-let cart=[]
+let cart = []
 //Write a function addToCart(id) to add the product into the cart using spread operator
 //Example addToCart(1) should add product 1 into the cart array and then print the cart
 //addToCart(1)
 //addToCart(3)
 function addToCart(id) {
-const product = products.find(product => product.id === id);
-if (product) {
+    const product = products.find(product => product.id === id);
+    if (product) {
 
-    cart = [...cart, {...product,quantity:1}];
-  }
+        cart = [...cart, { ...product, quantity: 1 }];
+    }
 }
 console.log("Product List")
 console.log(products)
@@ -47,8 +47,9 @@ addToCart(3);
 console.log("My Cart");
 console.log(cart);
 console.log("================")
-console.log("Total Order Value: ")
+const totalOrderValue = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
+console.log("Total Order Value: " + totalOrderValue)
 
 //print total Order Value
- 
+
 
