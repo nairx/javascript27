@@ -38,18 +38,30 @@ function addToCart(id) {
         cart = [...cart, { ...product, quantity: 1 }];
     }
 }
+
+function increment(id) {
+    cart = cart.map(item => item.id === id ? { ...item, quantity: item.quantity + 1 } : item)
+}
+
 console.log("Product List")
 console.log(products)
 console.log("Adding Product 1 to the cart")
 addToCart(1);
 console.log("Adding Product 3 to the cart")
 addToCart(3);
+
+console.log("Increasing the quantity of Product 1")
+increment(1)
+console.log("Increasing the quantity of Product 3")
+increment(3)
+console.log("Increasing the quantity of Product 3")
+increment(3)
+
 console.log("My Cart");
 console.log(cart);
 console.log("================")
 const totalOrderValue = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
 console.log("Total Order Value: " + totalOrderValue)
 
-//print total Order Value
 
 
