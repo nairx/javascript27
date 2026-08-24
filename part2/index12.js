@@ -43,20 +43,28 @@ function increment(id) {
     cart = cart.map(item => item.id === id ? { ...item, quantity: item.quantity + 1 } : item)
 }
 
+function decrement(id) {
+    cart = cart.map(item => item.id === id ? { ...item, quantity: item.quantity - 1 } : item)
+}
+
 console.log("Product List")
 console.log(products)
 console.log("Adding Product 1 to the cart")
 addToCart(1);
 console.log("Adding Product 3 to the cart")
 addToCart(3);
-
+console.log("My Cart");
+console.log(cart);
 console.log("Increasing the quantity of Product 1")
 increment(1)
 console.log("Increasing the quantity of Product 3")
 increment(3)
 console.log("Increasing the quantity of Product 3")
 increment(3)
-
+console.log("My Cart");
+console.log(cart);
+console.log("Decreasing the quantity of Product 3")
+decrement(3)
 console.log("My Cart");
 console.log(cart);
 console.log("================")
