@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <button id="b1">Show Image</button>
+    <button id="b2">Change Image</button>
+    <p>
+      <img src="1.png" id="photo" alt="" />
+    </p>
+    <script>
+      $("#b1").click(() => {
+        let name = $("#photo").attr("src");
+        alert(name);
+      });
+      $("#b2").click(() => {
+        let name = $("#photo").attr("src","2.png");
+      });
+    </script>
+  </body>
+</html>
