@@ -4,7 +4,6 @@ function fetchData() {
         setTimeout(() => reject("Something went wrong"), 3000)
     })
 }
-
 async function getData() {
     try {
         console.log("Start")
@@ -16,5 +15,4 @@ async function getData() {
         console.log(error)
     }
 }
-
 getData()
