@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="b1">Add Class</button>
+    <button id="b2">Remove Class</button>
+    <button id="b3">Toggle Class</button>
+    <button id="b4">Dark/Light</button>
+    <p id="message">Hello World</p>
+    <script>
+      //   $("#message").addClass("highlight");
+      //   $("#message").removeClass("highlight");
+      //   $("#message").toggleClass("highlight");
+
+      $("#b1").click(() => {
+        $("#message").addClass("highlight");
+      });
+
+      $("#b2").click(() => {
+        $("#message").removeClass("highlight");
+      });
+
+      $("#b3").click(() => {
+        $("#message").toggleClass("highlight");
+      });
+
+      $("#b4").click(() => {
+        $("body").toggleClass("dark");
+      });
+    </script>
+  </body>
+</html>
