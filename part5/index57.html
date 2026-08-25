@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <form id="registrationForm">
+      <p>
+        <input type="text" placeholder="Name" id="name" />
+      </p>
+      <p>
+        <input type="text" placeholder="Email" id="email" />
+      </p>
+      <p>
+        <select id="course">
+          <option>Java</option>
+          <option>Python</option>
+          <option>MERN</option>
+        </select>
+      </p>
+      <p>
+        <input type="number" id="age" />
+      </p>
+      <button>Add Student</button>
+    </form>
+    <table border="1" id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Age</th>
+        </tr>
+    </table>
+    <script>
+      $("#registrationForm").on("submit", () => {
+        event.preventDefault();
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let course = $("#course").val();
+        let age = $("#age").val();
+        let row = `
+         <tr>
+            <td>${name}</td>
+             <td>${email}</td>
+              <td>${course}</td>
+               <td>${age}</td>
+        
+        </tr>
+        `
+        $("#studentTable").append(row)
+      });
+    </script>
+  </body>
+</html>
