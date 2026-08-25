@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1 id="head">Heading</h1>
+    <div id="container">
+      <p id="para1">Paragraph one - <button id="b1">Delete</button></p>
+      <p id="para2">Paragraph two - <button id="b2">Delete</button></p>
+    </div>
+    <button id="b3">Delete All</button>
+    <script>
+      $("#b1").click(() => {
+        $("#para1").remove();
+      });
+      $("#b2").click(() => {
+        $("#para2").remove();
+      });
+      $("#b3").click(() => {
+        $("#container").empty();
+      });
+    </script>
+  </body>
+</html>
