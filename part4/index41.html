@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <button id="h">Hide</button>
+    <button id="s">Show</button>
+    <button id="t">Toggle</button>
+    <p id="message">Hello World</p>
+    <script>
+      $("#h").click(() => {
+        $("#message").hide();
+      });
+      $("#s").click(() => {
+        $("#message").show();
+      });
+      $("#t").click(() => {
+        $("#message").toggle();
+      });
+    </script>
+  </body>
+</html>
